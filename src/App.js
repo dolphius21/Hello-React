@@ -1,9 +1,15 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route>
+          <Sidebar />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
