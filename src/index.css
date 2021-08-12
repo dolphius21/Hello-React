@@ -100,7 +100,7 @@ p {
   min-width: 49px;
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 1rem;
   padding: 0.5rem;
   border-radius: var(--radius);
   margin-bottom: 1rem;
@@ -167,6 +167,7 @@ p {
   .sidebar-header {
     min-width: 220px;
     padding: 0.5rem 0.75rem 0.5rem 0;
+    margin: 1rem;
   }
   .sidebar-container .sidebar-header .logo {
     margin-right: 0.5rem;

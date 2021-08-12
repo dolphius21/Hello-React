@@ -4,11 +4,12 @@ import {
   FaReact,
   FaBars,
   FaBirthdayCake,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
+  FaChevronLeft
 } from 'react-icons/fa';
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handleToggleClick = () => {
     setShowSidebar(!showSidebar);
@@ -42,7 +43,7 @@ const Sidebar = () => {
         className={`toggle-btn ${showSidebar && 'active-sidebar'}`}
         onClick={handleToggleClick}
       >
-        <FaBars />
+        {showSidebar ? <FaChevronLeft /> : <FaBars />}
       </div>
     </>
   );
