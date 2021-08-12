@@ -5,7 +5,9 @@
   --primary-clr-light: #2c8eff;
   --primary-clr-dark: #035ae0;
   /* darkest grey - used for headings */
-  --neutral-clr-1: hsl(209, 61%, 16%);
+  --neutral-clr: #9c9cb3;
+  --neutral-clr-light: #c2c2d6;
+  --neutral-clr-dark: #78788f;
   --white-clr: #fff;
   --black-clr: #222;
   --transition: all 0.3s linear;
@@ -81,17 +83,24 @@ p {
 
 /* Sidebar Styles */
 .sidebar-container {
-  height: 100vh;
   position: fixed;
-  width: 80px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0px;
   background: var(--primary-clr);
   color: var(--white-clr);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-sidebar {
+  width: 80px;
 }
 .sidebar-header {
+  min-width: 49px;
   display: flex;
   align-items: center;
   margin: 1rem;
-  background: var(--primary-clr-light);
   padding: 0.5rem;
   border-radius: var(--radius);
   margin-bottom: 1rem;
@@ -105,31 +114,59 @@ p {
   margin-bottom: none;
 }
 .nav-container .nav-links .nav-link {
-  padding: 1rem;
-  margin: 0 1rem 1rem 1rem;
-  border-radius: var(--radius);
+  padding: 0 1rem 0.5rem;
 }
-.nav-container .nav-links .nav-link .active,
-.nav-container .nav-links .nav-link:hover {
-  background: var(--primary-clr-dark);
-}
-.nav-container .nav-links a {
+.nav-container .nav-links .nav-link a {
+  min-width: 48px;
   display: flex;
   align-items: center;
   color: var(--white-clr);
+  padding: 1rem 1rem;
 }
-.nav-container .nav-links a .nav-icon {
+.nav-container .nav-links .nav-link .active,
+.nav-container .nav-links .nav-link a:hover {
+  background: var(--primary-clr-dark);
+  border-radius: var(--radius);
+}
+.nav-container .nav-links .nav-link a .nav-icon {
   font-size: 1rem;
 }
 .nav-container .nav-links .nav-link a p {
+  white-space: nowrap;
   display: none;
 }
+.toggle-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--white-clr);
+  color: var(--primary-clr);
+  border: 1px solid var(--primary-clr-light);
+  border-radius: 50%;
+  top: 5px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.toggle-btn:hover {
+  background: var(--primary-clr);
+  color: var(--white-clr);
+  border: 1px solid var(--primary-clr);
+}
+.active-sidebar {
+  top: 5px;
+  left: 62px;
+}
 @media screen and (min-width: 800px) {
-  .sidebar-container {
+  .show-sidebar {
     width: 250px;
   }
   .sidebar-header {
-    padding: 0.5rem 0.75rem;
+    min-width: 220px;
+    padding: 0.5rem 0.75rem 0.5rem 0;
   }
   .sidebar-container .sidebar-header .logo {
     margin-right: 0.5rem;
@@ -137,14 +174,24 @@ p {
   .sidebar-container .sidebar-header .logo-text {
     display: block;
   }
-  .nav-container .nav-links .nav-link {
-    padding: 0.5rem 1.5rem;
+  .nav-container .nav-links .nav-link a {
+    min-width: 220px;
+    padding: 0.5rem 1rem;
   }
-  .nav-container .nav-links a .nav-icon {
-    margin-right: 0.5rem;
+  .nav-container .nav-links .nav-link a .nav-icon {
+    margin-right: 1rem;
   }
   .nav-container .nav-links .nav-link a p {
     display: block;
     margin: 0;
+  }
+  .toggle-btn {
+    padding: 0.5rem 0.48rem 0.5rem 0.52rem;
+    width: 35px;
+    height: 35px;
+  }
+  .active-sidebar {
+    top: 5px;
+    left: 232px;
   }
 }
