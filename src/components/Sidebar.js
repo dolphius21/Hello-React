@@ -5,19 +5,21 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <FaReact className="logo" />
-        <h1 className="logo-text">Hello React</h1>
+        <NavLink exact to="/">
+          <FaReact className="logo" />
+          <h1 className="logo-text">Hello React</h1>
+        </NavLink>
       </div>
       <nav className="nav-container">
         <ul className="nav-links">
           <li className="nav-link">
-            <NavLink to="/" activeClassName="active">
+            <NavLink exact to="/birthdays" activeClassName="active">
               <FaBirthdayCake className="nav-icon" />
               <p>Birthdays</p>
             </NavLink>
           </li>
           <li className="nav-link">
-            <NavLink to="/birthdays" activeClassName="active">
+            <NavLink to="/tours" activeClassName="active">
               <FaMapMarkerAlt className="nav-icon" />
               <p>Tours</p>
             </NavLink>
