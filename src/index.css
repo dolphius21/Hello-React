@@ -11,9 +11,9 @@
   --black-clr-dark: #1c1a1c;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --radius: 0.5rem;
+  --radius: 1rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(70, 82, 190, 0.1);
+  --dark-shadow: 0 5px 15px rgba(70, 82, 190, 0.05);
   --max-width: 1400px;
   --fixed-width: 620px;
 }
@@ -221,6 +221,9 @@ h4 {
 .birthday h4 {
   margin-bottom: 0.35rem;
   font-size: 1.5rem;
+}
+.birthday p {
+  color: var(--neutral-clr-dark);
 }
 .birthdays-btn {
   margin: auto;

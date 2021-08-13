@@ -9,7 +9,7 @@ const Birthdays = () => {
   return (
     <div className="birthdays">
       <div className="birthdays-card">
-        <h3>Birthdays</h3>
+        <h3>{list.length} birthdays today</h3>
         <Birthday list={list} />
         <Button className="birthdays-btn" onClick={() => setList([])}>
           clear all

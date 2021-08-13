@@ -8,7 +8,7 @@ const BirthdayItem = ({ list }) => {
             <img src={image} alt={name} />
             <div>
               <h4>{name}</h4>
-              <p>{birthday}</p>
+              <p>{age} years old</p>
             </div>
           </article>
         );
