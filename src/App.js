@@ -1,18 +1,23 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PageWrapper from './components/PageWrapper';
 import Sidebar from './components/Sidebar';
-import BirthdayList from './components/BirthdayList';
+import Birthdays from './components/Birthdays';
 
 function App() {
   return (
     <BrowserRouter>
       <PageWrapper>
         <Sidebar />
-        <Switch>
-          <Route>
-            <BirthdayList />
-          </Route>
-        </Switch>
+        <main className="main-content">
+          <Switch>
+            <Route path="/">
+              <h1>Home</h1>
+            </Route>
+            <Route>
+              <Birthdays path="/birthdays" />
+            </Route>
+          </Switch>
+        </main>
       </PageWrapper>
     </BrowserRouter>
   );

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaReact, FaBirthdayCake, FaMapMarkerAlt } from 'react-icons/fa';
 
