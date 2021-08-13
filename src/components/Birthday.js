@@ -2,7 +2,7 @@ const BirthdayItem = ({ list }) => {
   return (
     <>
       {list.map((strawhat) => {
-        const { id, name, age, birthday, image } = strawhat;
+        const { id, name, age, image } = strawhat;
         return (
           <article key={id} className="birthday">
             <img src={image} alt={name} />
