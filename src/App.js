@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PageWrapper from './components/PageWrapper';
 import Sidebar from './components/Sidebar';
 import Birthdays from './components/Birthdays';
+import Tours from './components/Tours';
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
             <Route exact path="/">
               <h1>Home</h1>
             </Route>
-            <Route>
-              <Birthdays exact path="/birthdays" />
+            <Route exact path="/birthdays">
+              <Birthdays />
+            </Route>
+            <Route exact path="/tours">
+              <Tours />
             </Route>
           </Switch>
         </main>

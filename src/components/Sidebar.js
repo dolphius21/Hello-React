@@ -19,7 +19,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li className="nav-link">
-            <NavLink to="/tours" activeClassName="active">
+            <NavLink exact to="/tours" activeClassName="active">
               <FaMapMarkerAlt className="nav-icon" />
               <p>Tours</p>
             </NavLink>
