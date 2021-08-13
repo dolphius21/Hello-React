@@ -117,19 +117,21 @@ h4 {
 }
 .sidebar-header {
   min-width: 40px;
-  display: flex;
-  align-items: center;
   margin: 0.7rem;
   padding: 0.5rem;
   border-radius: var(--radius);
   margin-bottom: 1rem;
+}
+.sidebar-header a {
+  display: flex;
+  align-items: center;
   color: var(--react-clr);
 }
-.sidebar .sidebar-header .logo {
+.sidebar-header .logo {
   font-size: 2.25rem;
   width: 30px;
 }
-.sidebar .sidebar-header .logo-text {
+.sidebar-header .logo-text {
   font-size: 1.45rem;
   display: none;
   margin-bottom: none;
@@ -211,8 +213,8 @@ h4 {
   align-items: center;
 }
 .birthday img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   border-radius: 50%;
 }

@@ -10,11 +10,11 @@ function App() {
         <Sidebar />
         <main className="main-content">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <h1>Home</h1>
             </Route>
             <Route>
-              <Birthdays path="/birthdays" />
+              <Birthdays exact path="/birthdays" />
             </Route>
           </Switch>
         </main>
