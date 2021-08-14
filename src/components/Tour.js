@@ -14,7 +14,7 @@ const Tour = ({ details, onTourRemove }) => {
           <h4 className="tour-price">${price}</h4>
         </div>
         <p>
-          {isExpandInfo ? info : info.substring(0, 200)}
+          {isExpandInfo ? info : info.substring(0, 200) + '...'}
           <button
             onClick={() => {
               setIsExpandInfo(!isExpandInfo);
