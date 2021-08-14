@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { FaReact, FaBirthdayCake, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaReact, FaBirthdayCake, FaPlane } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -18,7 +18,7 @@ const Sidebar = () => {
           </li>
           <li className="nav-link">
             <NavLink exact to="/tours" activeClassName="active">
-              <FaMapMarkerAlt className="nav-icon" />
+              <FaPlane className="nav-icon" />
             </NavLink>
           </li>
         </ul>
