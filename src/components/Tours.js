@@ -10,8 +10,7 @@ const Tours = () => {
   const [tours, setTours] = useState([]);
   const { get, loading } = useFetch(url);
 
-  console.log(loading);
-  const handleFetchedData = () => {
+  const handleFetchedTours = () => {
     get()
       .then((data) => {
         setTours(data);
@@ -20,7 +19,7 @@ const Tours = () => {
   };
 
   useEffect(() => {
-    handleFetchedData();
+    handleFetchedTours();
   }, []);
 
   const handleTourRemove = (id) => {
@@ -37,7 +36,7 @@ const Tours = () => {
       ) : !tours.length ? (
         <>
           <h2 className="title">No Existing Tours</h2>
-          <Button className="green-btn" onClick={handleFetchedData}>
+          <Button className="green-btn" onClick={handleFetchedTours}>
             Refresh
           </Button>
         </>
