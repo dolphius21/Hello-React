@@ -7,7 +7,6 @@ const Sidebar = () => {
       <div className="sidebar-header">
         <NavLink exact to="/">
           <FaReact className="logo" />
-          <h1 className="logo-text">Hello React</h1>
         </NavLink>
       </div>
       <nav className="nav-container">
@@ -15,13 +14,11 @@ const Sidebar = () => {
           <li className="nav-link">
             <NavLink exact to="/birthdays" activeClassName="active">
               <FaBirthdayCake className="nav-icon" />
-              <p>Birthdays</p>
             </NavLink>
           </li>
           <li className="nav-link">
             <NavLink exact to="/tours" activeClassName="active">
               <FaMapMarkerAlt className="nav-icon" />
-              <p>Tours</p>
             </NavLink>
           </li>
         </ul>
