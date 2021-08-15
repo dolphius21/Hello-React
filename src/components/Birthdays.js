@@ -11,7 +11,7 @@ const Birthdays = () => {
       <div className="card birthdays-card">
         <h3>{list.length} birthdays today</h3>
         <Birthday list={list} />
-        <Button className="birthdays-btn" onClick={() => setList([])}>
+        <Button className="btn btn-red btn-center" onClick={() => setList([])}>
           clear all
         </Button>
       </div>

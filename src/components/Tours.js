@@ -36,7 +36,7 @@ const Tours = () => {
       ) : !tours.length ? (
         <>
           <h2 className="title">No Existing Tours</h2>
-          <Button className="green-btn" onClick={handleFetchedTours}>
+          <Button className="btn-green btn-center" onClick={handleFetchedTours}>
             Refresh
           </Button>
         </>

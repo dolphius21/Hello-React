@@ -16,6 +16,7 @@ const Tour = ({ details, onTourRemove }) => {
         <p>
           {isExpandInfo ? info : info.substring(0, 200) + '...'}
           <button
+            className="btn-readmore"
             onClick={() => {
               setIsExpandInfo(!isExpandInfo);
             }}
@@ -23,7 +24,7 @@ const Tour = ({ details, onTourRemove }) => {
             {isExpandInfo ? 'show less' : 'read more'}
           </button>
         </p>
-        <Button className="delete-btn" onClick={() => onTourRemove(id)}>
+        <Button className="btn-center" onClick={() => onTourRemove(id)}>
           not interested
         </Button>
       </div>
