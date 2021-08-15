@@ -6,7 +6,7 @@ const Tour = ({ details, onTourRemove }) => {
   const [isExpandInfo, setIsExpandInfo] = useState(false);
 
   return (
-    <article className="tour">
+    <article className="card tour">
       <img src={image} alt={name} />
       <div className="tour-content">
         <div className="tour-info">
