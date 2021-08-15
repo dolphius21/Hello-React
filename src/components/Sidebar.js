@@ -1,5 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { FaReact, FaBirthdayCake, FaPlane } from 'react-icons/fa';
+import {
+  FaReact,
+  FaBirthdayCake,
+  FaPlane,
+  FaQuestionCircle
+} from 'react-icons/fa';
 import { MdComment } from 'react-icons/md';
 
 const Sidebar = () => {
@@ -25,6 +30,11 @@ const Sidebar = () => {
           <li className="nav-link">
             <NavLink exact to="/reviews" activeClassName="active">
               <MdComment className="nav-icon" />
+            </NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink exact to="/questions" activeClassName="active">
+              <FaQuestionCircle className="nav-icon" />
             </NavLink>
           </li>
         </ul>

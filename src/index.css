@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 :root {
   --react-clr: #61dbfb;
+  --react-clr-lighter: #f5fcff;
   --react-clr-light: #d8f3fc;
-  --react-clr-dark: #38bcdd;
+  --react-clr-dark: #38b7dd;
   --red-clr: #ee4042;
   --green-clr: #3dd598;
   --neutral-clr: #9c9cb3;
-  --neutral-clr-light: #f2f2fb;
+  --neutral-clr-light: #e1e1f1;
   --neutral-clr-dark: #78788f;
   --white-clr: #fff;
   --black-clr: #1f2020;
   --black-clr-light: #36363c;
   --black-clr-dark: #1c1a1c;
-  --transition: all 0.3s linear;
+  --transition-1: all 0.2s linear;
+  --transition-2: all 0.3s linear;
   --spacing: 0.1rem;
   --border: 2px solid #eaeaf7;
   --radius-sm: 0.5rem;
@@ -62,7 +64,7 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
   h1 {
     font-size: 4rem;
   }
@@ -117,7 +119,7 @@ h4 {
   font-weight: 600;
   padding: 13px 40px;
   border: 0;
-  transition: var(--transition);
+  transition: var(--transition-2);
 }
 .btn-default {
   color: var(--white-clr);
@@ -154,7 +156,7 @@ h4 {
   background: var(--black-clr);
   color: var(--white-clr);
   overflow: hidden;
-  transition: var(--transition);
+  transition: var(--transition-2);
 }
 .sidebar-header {
   min-width: 40px;
@@ -185,7 +187,7 @@ h4 {
   color: var(--white-clr);
   padding: 0.75rem;
   border-radius: var(--radius-sm);
-  transition: var(--transition);
+  transition: var(--transition-2);
 }
 .nav-container .nav-links .nav-link .active {
   background: var(--black-clr-light);
@@ -361,18 +363,89 @@ h4 {
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
-  transition: var(--transition);
+  transition: var(--transition-2);
   cursor: pointer;
 }
 .prev-btn:hover,
 .next-btn:hover {
   color: var(--clr-primary-5);
 }
+/* Accordion Styles */
+.accordion-container {
+  max-width: 1200px;
+  text-align: center;
+}
+.accordion-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+.accordion-image-container {
+  width: 400px;
+  margin-bottom: 1rem;
+}
+.FAQs-container h2 {
+  margin-bottom: 2rem;
+}
+.question-container {
+  border: 1px solid var(--neutral-clr-light);
+  border-radius: var(--radius-sm);
+  max-width: 470px;
+  margin-bottom: 7px;
+  text-align: left;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  padding-top: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition-2);
+  color: var(--black-clr-light);
+}
+.question:hover {
+  color: var(--react-clr-dark);
+}
+.question-title {
+  font-size: 1.1rem;
+  margin-right: 2rem;
+}
+.question-info {
+  background: var(--react-clr-lighter);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  padding: 0.5rem 1rem;
+  transition: var(--transition-1);
+  color: var(--neutral-clr-dark);
+  overflow: hidden;
+}
+@media screen and (max-width: 750px) {
+  .accordion-card {
+    padding-top: 140px;
+  }
+  .accordion-image-container {
+    width: 250px;
+    position: absolute;
+    top: -120px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .accordion-card {
+    flex-direction: row;
+  }
+  .accordion-image-container {
+    width: 500px;
+    margin: 0 2rem;
+  }
+}
 /* Loader Styles*/
 .spinner {
   animation: rotator 1.4s linear infinite;
 }
-
 @keyframes rotator {
   0% {
     transform: rotate(0deg);
