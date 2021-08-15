@@ -3,6 +3,7 @@ import PageWrapper from './components/PageWrapper';
 import Sidebar from './components/Sidebar';
 import Birthdays from './components/Birthdays';
 import Tours from './components/Tours';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route exact path="/tours">
               <Tours />
+            </Route>
+            <Route exact path="/reviews">
+              <Reviews />
             </Route>
           </Switch>
         </main>
