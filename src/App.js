@@ -5,6 +5,7 @@ import Birthdays from './components/Birthdays';
 import Tours from './components/Tours';
 import Reviews from './components/Reviews';
 import Accordion from './components/Accordion';
+import Menu from './components/Menu';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route exact path="/questions">
               <Accordion />
+            </Route>
+            <Route exact path="/menu">
+              <Menu />
             </Route>
           </Switch>
         </main>

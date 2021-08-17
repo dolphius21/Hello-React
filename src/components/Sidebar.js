@@ -5,7 +5,7 @@ import {
   FaPlane,
   FaQuestionCircle
 } from 'react-icons/fa';
-import { MdComment } from 'react-icons/md';
+import { MdComment, MdRestaurantMenu } from 'react-icons/md';
 
 const Sidebar = () => {
   return (
@@ -35,6 +35,11 @@ const Sidebar = () => {
           <li className="nav-link">
             <NavLink exact to="/questions" activeClassName="active">
               <FaQuestionCircle className="nav-icon" />
+            </NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink exact to="/menu" activeClassName="active">
+              <MdRestaurantMenu className="nav-icon" />
             </NavLink>
           </li>
         </ul>
