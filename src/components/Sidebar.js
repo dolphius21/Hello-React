@@ -3,7 +3,8 @@ import {
   FaReact,
   FaBirthdayCake,
   FaPlane,
-  FaQuestionCircle
+  FaQuestionCircle,
+  FaBriefcase
 } from 'react-icons/fa';
 import { MdComment, MdRestaurantMenu } from 'react-icons/md';
 
@@ -40,6 +41,11 @@ const Sidebar = () => {
           <li className="nav-link">
             <NavLink exact to="/menu" activeClassName="active">
               <MdRestaurantMenu className="nav-icon" />
+            </NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink exact to="/tabs" activeClassName="active">
+              <FaBriefcase className="nav-icon" />
             </NavLink>
           </li>
         </ul>

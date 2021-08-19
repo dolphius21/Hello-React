@@ -6,6 +6,7 @@ import Tours from './components/Tours';
 import Reviews from './components/Reviews';
 import Accordion from './components/Accordion';
 import Menu from './components/Menu';
+import Tabs from './components/Tabs';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route exact path="/menu">
               <Menu />
+            </Route>
+            <Route exact path="/tabs">
+              <Tabs />
             </Route>
           </Switch>
         </main>
