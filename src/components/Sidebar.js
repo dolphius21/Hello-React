@@ -44,7 +44,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li className="nav-link">
-            <NavLink exact to="/tabs" activeClassName="active">
+            <NavLink exact to="/jobs" activeClassName="active">
               <FaBriefcase className="nav-icon" />
             </NavLink>
           </li>

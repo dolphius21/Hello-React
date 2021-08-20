@@ -24,7 +24,7 @@
   --dark-shadow: 0 3px 30px rgba(70, 82, 190, 0.2);
   --solid-text-shadow: 0px 2px 0px #abc6e2;
   --solid-box-shadow: 0px 4px 0px 0#cedce9;
-  --max-width: 1400px;
+  --max-width: 1200px;
   --fixed-width: 620px;
 }
 * {
@@ -530,6 +530,95 @@ h4 {
   }
   .menu-image {
     height: 150px;
+  }
+}
+/* Jobs Styles */
+.jobs-container {
+  width: 90vw;
+  margin: 0 auto 5rem;
+  max-width: var(--max-width);
+}
+.jobs-center {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+.jobs-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+.job-btn {
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: var(--spacing);
+  margin: 0 0.5rem;
+  transition: var(--transition-1);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  line-height: 1;
+  font-weight: bold;
+}
+.job-active-btn,
+.job-btn:hover {
+  color: var(--react-clr-dark);
+  box-shadow: 0 2px var(--react-clr-dark);
+}
+.job-info h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.job-info h4 {
+  text-transform: uppercase;
+  color: var(--white-clr);
+  background: var(--react-clr-dark);
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+.job-date {
+  letter-spacing: var(--spacing);
+  color: var(--neutral-clr-dark);
+  margin-bottom: 1rem;
+}
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 2rem;
+  column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.job-icon {
+  color: var(--react-clr-dark);
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .job-container {
+    width: 95vw;
+  }
+  .jobs-center {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 4rem;
+    column-gap: 4rem;
+  }
+  .jobs-btn-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .job-btn {
+    margin-bottom: 1rem;
+  }
+  .job-active-btn,
+  .job-btn:hover {
+    box-shadow: -2px 0 var(--react-clr-dark);
   }
 }
 /* Loader Styles*/
