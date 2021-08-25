@@ -216,7 +216,7 @@ h4 {
 }
 .birthdays-card {
   max-width: var(--fixed-width);
-  width: 50vh;
+  width: 50vw;
   margin: 5rem 0;
   padding: 2rem;
 }
